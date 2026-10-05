@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Bistro Dolce Serena – italienische Küche, Pizza und Pasta in Lottstetten.">
+<title>Bistro Dolce Serena · Lottstetten</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&family=Parisienne&display=swap" rel="stylesheet">
+<style>
+:root{--green:#174f38;--red:#a52d2d;--cream:#f7f1e5;--ink:#20231f;--paper:#fffdf8}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--cream);font-family:Montserrat,Arial,sans-serif}a{text-decoration:none;color:inherit}
+.nav{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(255,253,248,.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(23,79,56,.15)}
+.navin{max-width:1180px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:10px 24px}
+.brand{display:flex;align-items:center;gap:12px;font-family:'Cormorant Garamond',serif;font-weight:700;font-size:24px;color:var(--green)}
+.brand img{width:48px;height:48px;object-fit:cover;border-radius:50%}.links{display:flex;gap:25px;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.13em}.links a:hover{color:var(--red)}
+.hero{min-height:100vh;display:grid;place-items:center;position:relative;overflow:hidden;background:radial-gradient(circle at 80% 25%,#fff 0,#f8f1e4 35%,#e9ddc9 100%)}
+.hero:before{content:'';position:absolute;inset:0;background:linear-gradient(115deg,rgba(23,79,56,.08),transparent 45%,rgba(165,45,45,.07))}
+.hero-inner{position:relative;max-width:1180px;width:100%;padding:140px 24px 90px;display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:center}
+.eyebrow,.kicker{font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:var(--red);font-weight:700}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(58px,8vw,108px);line-height:.82;margin:18px 0;color:var(--green);font-weight:600}
+.script{font-family:Parisienne,cursive;color:var(--red);font-size:clamp(38px,5vw,65px);margin-left:6px}
+.hero p{font-size:16px;line-height:1.9;max-width:570px;color:#4a4a44}.buttons{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+.btn{padding:15px 23px;border-radius:2px;border:1px solid var(--green);font-size:12px;text-transform:uppercase;letter-spacing:.14em;font-weight:700;transition:.25s}
+.btn.primary{background:var(--green);color:white}.btn.primary:hover{background:#0f3827}.btn.secondary{background:transparent}.btn.secondary:hover{background:white}
+.hero-card{background:var(--paper);padding:18px;box-shadow:0 25px 70px rgba(34,30,20,.18);transform:rotate(1deg)}.hero-card img{width:100%;display:block;aspect-ratio:1/1.06;object-fit:cover}
+.hero-caption{padding:15px 4px 2px;text-align:center;font-family:'Cormorant Garamond',serif;font-size:23px;color:var(--green)}
+section{padding:105px 24px}.wrap{max-width:1180px;margin:auto}.section-head{text-align:center;max-width:750px;margin:0 auto 48px}
+.section-head h2{font-family:'Cormorant Garamond',serif;font-size:58px;line-height:.95;color:var(--green);margin:12px 0}.section-head p{line-height:1.8;color:#64645d}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.card{background:var(--paper);padding:32px;border-top:3px solid var(--green);box-shadow:0 10px 30px rgba(40,35,20,.07)}
+.card h3{font-family:'Cormorant Garamond',serif;font-size:31px;color:var(--green);margin:0 0 12px}.card p{line-height:1.7;color:#666}
+.menu-area{background:#183f30;color:#fff}.menu-area .section-head h2{color:#fff}.menu-area .section-head p{color:#d8e1da}
+.menu-buttons{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:900px;margin:auto}.menu-box{border:1px solid rgba(255,255,255,.3);padding:35px;text-align:center;background:linear-gradient(145deg,rgba(255,255,255,.06),rgba(255,255,255,.01))}
+.menu-box h3{font-family:'Cormorant Garamond',serif;font-size:34px;margin:0 0 10px}.menu-box p{color:#dbe4de;line-height:1.6}.menu-box .btn{color:#fff;border-color:#fff;display:inline-block;margin-top:10px}
+.tribute{background:#f2eadb}.tribute-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:60px;align-items:center}.portrait{background:#fff;padding:14px;box-shadow:0 18px 50px rgba(0,0,0,.12);transform:rotate(-1deg)}.portrait img{width:100%;display:block}
+.tribute-copy h2{font-family:'Cormorant Garamond',serif;color:var(--green);font-size:58px;margin:8px 0 22px}.tribute-copy p{font-family:'Cormorant Garamond',serif;font-size:21px;line-height:1.55;color:#383833}
+.gallery{display:grid;grid-template-columns:1fr 1fr;gap:18px}.gallery img{width:100%;height:390px;object-fit:cover}
+.contact{background:var(--paper)}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}.contact-box{padding:40px;background:#f5efe3;border-left:3px solid var(--red)}
+.contact-box h3{font-family:'Cormorant Garamond',serif;color:var(--green);font-size:35px;margin:0 0 15px}.contact-box p{line-height:1.8}
+.mapbtn{display:inline-block;margin-top:8px;background:var(--green);color:white;padding:14px 20px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.12em}
+.footer{background:#102f24;color:#dfe8e1;padding:35px 24px}.footerin{max-width:1180px;margin:auto;display:flex;justify-content:space-between;gap:20px;align-items:center}.footer strong{font-family:'Cormorant Garamond',serif;font-size:26px;color:#fff}.footer small{letter-spacing:.08em}
+@media(max-width:800px){.links{display:none}.hero-inner,.tribute-grid,.contact-grid{grid-template-columns:1fr}.hero-inner{gap:35px;padding-top:120px}.hero-card{max-width:500px;margin:auto}.cards{grid-template-columns:1fr}.menu-buttons{grid-template-columns:1fr}.gallery{grid-template-columns:1fr}.gallery img{height:300px}.section-head h2,.tribute-copy h2{font-size:46px}.footerin{flex-direction:column;text-align:center}.brand span{font-size:20px}}
+</style>
+</head>
+<body>
+<nav class="nav"><div class="navin">
+<a class="brand" href="#top"><img src="logo.jpg" alt="Bistro Dolce Serena Logo"><span>Bistro Dolce Serena</span></a>
+<div class="links"><a href="#bistro">Das Bistro</a><a href="#speisekarte">Speisekarte</a><a href="#takeaway">Takeaway</a><a href="#getraenke">Getränke/Weine</a><a href="#geschichte">Geschichte</a><a href="#kontakt">Kontakt</a></div>
+</div></nav>
+
+<header class="hero" id="top"><div class="hero-inner"><div>
+<div class="eyebrow">Italianità · Lottstetten</div><h1>Bistro<br><span class="script">Dolce Serena</span></h1>
+<p>Italienische Küche, Pizza und Pasta – mit echter Leidenschaft, familiärer Atmosphäre und einem Stück Geschichte aus Lottstetten.</p>
+<div class="buttons"><a class="btn primary" href="#speisekarte">Speisekarte ansehen</a><a class="btn secondary" href="#kontakt">Besuchen Sie uns</a></div>
+</div><div class="hero-card"><img src="logo.jpg" alt="Bistro Dolce Serena"><div class="hero-caption">Benvenuti · Herzlich willkommen</div></div></div></header>
+
+<section id="bistro"><div class="wrap"><div class="section-head"><div class="kicker">Benvenuti</div><h2>Ein Bistro mit Seele</h2><p>Im Bistro Dolce Serena verbinden sich italienische Küche, Handwerk und die herzliche Atmosphäre eines Hauses mit Geschichte.</p></div>
+<div class="cards"><article class="card"><h3>Pizza</h3><p>Traditionelle italienische Pizza mit ausgewählten Zutaten und der persönlichen Handschrift von Marcello Cogoni.</p></article>
+<article class="card"><h3>Pasta</h3><p>Spaghetti, Penne und Lasagne – italienische Klassiker, frisch und mit viel Liebe zubereitet.</p></article>
+<article class="card"><h3>Famiglia</h3><p>Ein Ort zum Ankommen, Genießen und Zusammensitzen – ganz nach italienischer Art.</p></article></div></div></section>
+
+<section class="menu-area" id="speisekarte"><div class="wrap"><div class="section-head"><div class="kicker">La nostra cucina</div><h2>Unsere Speisekarte</h2><p>Entdecken Sie unsere vollständige Speisekarte als druckfertige PDF. Die Website verlinkt direkt auf Ihre Originalkarte.</p></div>
+<div class="menu-buttons"><div class="menu-box"><h3>Speisekarte</h3><p>Antipasti · Pasta · Fleisch · Pizza</p><a class="btn" href="speisekarte.pdf" target="_blank">PDF öffnen</a></div>
+<div class="menu-box" id="takeaway"><h3>Takeaway</h3><p>Unsere Takeaway-Karte mit den dafür angebotenen Spezialitäten.</p><a class="btn" href="takeaway-falzkarte.pdf" target="_blank">Takeaway öffnen</a></div></div></div></section>
+
+<section class="menu-area" id="getraenke"><div class="wrap"><div class="section-head"><div class="kicker">Bevande · Vini</div><h2>Getränke / Weine</h2><p>Entdecken Sie unsere Getränkekarte – passend zu einem schönen Abend im Bistro Dolce Serena.</p></div>
+<div class="menu-buttons"><div class="menu-box"><h3>Getränkekarte</h3><p>Alkoholfreie Getränke · Kaffee · Tee · weitere Getränke</p><a class="btn" href="getraenkekarte.pdf" target="_blank">Getränkekarte öffnen</a></div>
+<div class="menu-box"><h3>Weine</h3><p>Eine feine Auswahl für echte Weingenießer – unsere Weine im Flaschenausschank.</p><span class="btn" style="opacity:.75;cursor:default">Weine im Bistro</span></div></div></div></section>
+
+<section id="geschichte" class="tribute"><div class="wrap tribute-grid"><div class="portrait"><img src="marcello.jpg" alt="Marcello Cogoni"></div>
+<div class="tribute-copy"><div class="kicker">Una storia italiana</div><h2>Geschichte</h2>
+<p>Seit mehr als vier Jahrzehnten steht Marcello Cogoni für Italienische Küche, echtes Handwerk und die Leidenschaft für gute Pizza.</p>
+<p>Das Restaurant, in dem heute das Bistro Dolce Serena seine Türen öffnet, trägt ein ganz besonderes Stück Lottstetter Geschichte in sich. Über viele Jahre wurde dieser Ort von der Verbindung italienischer und deutscher Küche geprägt.</p>
+<p>Mit dem Bistro Dolce Serena beginnt ein neues Kapitel – unter seiner Führung, mit neuer Energie und doch mit der alten, vertrauten Leidenschaft.</p></div></div></section>
+
+<section><div class="wrap"><div class="section-head"><div class="kicker">Impressionen</div><h2>Dolce · Serena · Italiano</h2></div>
+<div class="gallery"><img src="pizza.jpg" alt="Pizza von Marcello Cogoni"><img src="gericht.jpg" alt="Italienisches Gericht"></div></div></section>
+
+<section id="kontakt" class="contact"><div class="wrap"><div class="section-head"><div class="kicker">Ci vediamo</div><h2>Wir freuen uns auf Sie</h2></div>
+<div class="contact-grid"><div class="contact-box"><h3>Bistro Dolce Serena</h3><p><strong>Hauptstrasse 38</strong><br>79807 Lottstetten</p>
+<a class="mapbtn" href="https://www.google.com/maps/search/?api=1&amp;query=Hauptstrasse+38,+79807+Lottstetten" target="_blank">Route zu uns</a></div>
+<div class="contact-box"><h3>Benvenuti</h3><p>Ob Pizzaabend, Pasta, ein gemütliches Essen mit der Familie oder einfach ein Stück Italien: Wir heißen Sie herzlich willkommen.</p><p><strong>E-Mail</strong><br><a href="mailto:bistrodolceserena@gmail.com">bistrodolceserena@gmail.com</a></p></div></div></div></section>
+
+<footer class="footer"><div class="footerin"><strong>Bistro Dolce Serena</strong><small>Hauptstrasse 38 · 79807 Lottstetten · Italia nel cuore</small></div></footer>
+</body>
+</html>
